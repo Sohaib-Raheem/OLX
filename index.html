@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OLX Clone - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">OLX</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search for cars, mobiles and more...">
+      <button>Search</button>
+    </div>
+    <div class="auth-links">
+      <a id="loginLink" href="login.html">Login</a>
+      <button class="sell-btn" id="sell-Btn">+ Sell</button>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+  </header>
+
+  <!-- Categories -->
+  <nav class="categories" id="categories">
+    <a href="#">Cars</a>
+    <a href="#">Mobiles</a>
+    <a href="#">Bikes</a>
+    <a href="#">Property</a>
+    <a href="#">Jobs</a>
+    <a href="#">Electronics</a>
+    <a href="#">Furniture</a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Fresh recommendations</h2>
+  </section>
+
+  <!--  Product Section  -->
+  <main>
+    <section class="products-section">
+      <div id="container" class="products"></div>
+    </section>
+  </main>
+
+  <!-- Latest Ads -->
+  <section class="ads">
+    <h2>Latest Ads</h2>
+    <div id="adsContainer"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 OLX Clone | All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("menu-toggle");
+  const categories = document.getElementById("categories");
+
+  if (toggle && categories) {
+    toggle.addEventListener("click", () => {
+      categories.classList.toggle("active");
+    });
+  } else {
+    console.error("⚠️ Menu toggle or categories not found!");
+  }
+});
+</script>
+
+
+  <script src="script.js"></script>
+  <script src="ad.js"></script>
+</body>
+</html>

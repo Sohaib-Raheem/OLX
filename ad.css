@@ -1,0 +1,159 @@
+* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+/* Body */
+body {
+  background: #f2f4f5;
+  color: #002f34;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ✅ Post Ad Section */
+.post-ad {
+  max-width: 600px;
+  width: 90%;
+  background: #fff;
+  margin: 50px auto;
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✅ Heading */
+.post-ad h2 {
+  font-size: 26px;
+  color: #002f34;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* ✅ Form Layout */
+.ad-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Labels */
+.ad-form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #002f34;
+  margin-bottom: 5px;
+}
+
+/* Inputs, Textarea, Select */
+.ad-form input[type="text"],
+.ad-form input[type="number"],
+.ad-form select,
+.ad-form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.25s ease;
+}
+
+.ad-form input:focus,
+.ad-form select:focus,
+.ad-form textarea:focus {
+  outline: none;
+  border-color: #002f34;
+  box-shadow: 0 0 0 2px rgba(0, 47, 52, 0.15);
+}
+
+/* ✅ File Upload */
+#ad-images {
+  border: none;
+  background: none;
+}
+
+input[type="file"] {
+  font-size: 13px;
+  color: #333;
+  background: #fafafa;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  background: #002f34;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+  background: #024047;
+}
+
+/* ✅ Submit Button */
+.submit-btn {
+  background: #002f34;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.submit-btn:hover {
+  background: #024047;
+  transform: translateY(-2px);
+}
+
+/* ✅ Footer */
+.footer {
+  margin-top: auto;
+  background: #002f34;
+  color: #fff;
+  text-align: center;
+  padding: 14px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .post-ad {
+    padding: 25px 30px;
+  }
+
+  .post-ad h2 {
+    font-size: 22px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+  }
+}

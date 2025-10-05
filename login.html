@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login.css">
+  <title>Sign Up & Login</title>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Signup Form -->
+    <div id="sign-up">
+      <h1>Create Account</h1>
+      <form onsubmit="signUp(event)">
+        <input type="text" placeholder="First Name" required id="first-name"><br>
+        <input type="text" placeholder="Last Name" required id="last-name"><br>
+        <input type="email" placeholder="Email Address" required id="email"><br>
+        <input type="password" placeholder="Password" required id="password"><br>
+        <button type="submit">Sign Up</button>
+      </form>
+      <p>Already have an account? <a onclick="switchToLogin()">Login</a></p>
+    </div>
+
+    <!-- Login Form -->
+    <div id="log-in" class="hidden">
+      <h1>Welcome Back</h1>
+      <form onsubmit="logIn(event)">
+        <input type="email" placeholder="Email Address" required id="login-email"><br>
+        <input type="password" placeholder="Password" required id="login-password"><br>
+        <button type="submit">Log In</button>
+      </form>
+      <p>Don’t have an account? <a onclick="switchToSignup()">Signup</a></p>
+    </div>
+
+    <p id="message"></p>
+  </div>
+
+  <script src="login.js"></script>
+  <script>
+    // Hide/show helpers
+    function switchToLogin() {
+      document.getElementById("sign-up").style.display = "none";
+      document.getElementById("log-in").style.display = "block";
+      document.getElementById("message").textContent = "";
+    }
+
+    function switchToSignup() {
+      document.getElementById("log-in").style.display = "none";
+      document.getElementById("sign-up").style.display = "block";
+      document.getElementById("message").textContent = "";
+    }
+
+    // Default: show signup, hide login
+    document.getElementById("sign-up").style.display = "block";
+    document.getElementById("log-in").style.display = "none";
+  </script>
+</body>
+</html>
