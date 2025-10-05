@@ -203,9 +203,7 @@ body {
   font-size: 14px;
   font-weight: 500;
 }
-/* ============================= */
-/* 🔹 Responsive Design */
-/* ============================= */
+
 @media (max-width: 992px) {
   .products {
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));

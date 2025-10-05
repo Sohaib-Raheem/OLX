@@ -30,7 +30,7 @@ function adInfo(event) {
   let product_category = document.getElementById("category").value.trim();
   let product_price = document.getElementById("price").value.trim();
   let product_location = document.getElementById("location").value.trim();
-  let product_images_file = document.getElementById("images").files[0]; // <input type="file">
+  let product_images_file = document.getElementById("images").files[0]; 
 
   if (!product_images_file) {
     alert("⚠️ Please select an image before posting.");
